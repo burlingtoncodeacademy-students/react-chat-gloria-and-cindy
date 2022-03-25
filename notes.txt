@@ -1,0 +1,62 @@
+//FUNCTIONALITY
+
+COMPONENTS
+
+
+Server.js
+------------------
+Import mongoose
+Import express
+Import cors
+Import UserSchema
+
+Mongoose connect
+Db connection
+
+Port setup
+
+Error handling
+
+Use middleware functions
+
+Const User = mongoose.model(‘users’, UserSchema)
+
+GET / Routes
+
+Create / POST
+
+Listening
+
+
+UserSchema.js
+------------------
+
+Import mongoose
+
+UserSchema 
+
+postDate : Date
+user : String
+currentRoom : String
+userMessage: String
+
+module.exports = UserSchema
+
+
+Banner.jsx
+------------------
+
+Mostly html elements — H1 with React-Chat title?
+Rooms.jsx
+ChatBox.jsx
+Import useState
+Import useEffect — fetch local host
+Forms
+Buttons
+
+
+Ad.jsx
+------------------
+html elements — Image
+
+
