@@ -34,7 +34,7 @@ app.use(express.static("./build"));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-//Create User Model --- conneting to Chat Box
+//Create User Model --- connecting to Chat Box
 const UserMessage = mongoose.model("UserMessages", UserSchema);
 
 //UserMessages is collection

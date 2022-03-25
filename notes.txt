@@ -10,43 +10,43 @@ Server.js
 * Import cors
 * Import UserSchema
 
-Mongoose connect
+* Mongoose connect
 Db connection
 
-Port setup
+* Port setup
 
-Error handling
+* Error handling
 
-Use middleware functions
+* Use middleware functions
 
-Const User = mongoose.model(‘users’, UserSchema)
+* Const User = mongoose.model(‘users’, UserSchema)
 
-GET / Routes
+? GET / Routes - //unsure how to root to other pages
 
-Create / POST
+* Create / POST
 
-Listening
+* Listening
 
 
-UserSchema.js
+* UserSchema.js
 ------------------
 
-Import mongoose
+* Import mongoose
 
 *UserSchema 
 
-postDate : Date
-user : String
-currentRoom : String
-userMessage: String
+* postDate : Date
+* user : String
+* currentRoom : String
+* userMessage: String
 
-module.exports = UserSchema
+* module.exports = UserSchema
 
 
 Banner.jsx
 ------------------
 
-Mostly html elements — H1 with React-Chat title?
+* Mostly html elements — H1 with React-Chat title?
 Rooms.jsx
 ChatBox.jsx
 Import useState
