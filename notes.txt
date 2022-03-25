@@ -5,10 +5,10 @@ COMPONENTS
 
 Server.js
 ------------------
-Import mongoose
-Import express
-Import cors
-Import UserSchema
+* Import mongoose
+* Import express
+* Import cors
+* Import UserSchema
 
 Mongoose connect
 Db connection
@@ -33,7 +33,7 @@ UserSchema.js
 
 Import mongoose
 
-UserSchema 
+*UserSchema 
 
 postDate : Date
 user : String
