@@ -1,41 +1,63 @@
-//importing use state and use effect from react
-//importing css styles from styles folder
-import {useState, useEffect} from "react"
-import "../styles/App.css"
+//needed Imports
+import { useState, useEffect } from "react";
+import "../styles/App.css";
 
-//component function
+//---component function
 export default function ChatBox(props) {
-//usestate to hold the result of the fetch
-const [allUserMessages, setAllUserMessages] = useState ([]) 
-useEffect (async function fetch(){
-    //fetches info from local API route setup on server
-    let response = await fetch ("http://localhost:27017/react-chat")
-    //convert data to json   
-    let responseData = response.json()
-    return (responseData)
-},[])
+  //uses state to hold the result of the fetch
+  const [allEntries, setAllEntries] = useState([]);
 
-//conditionally render the component dependent on submit button
-//const [lookChatBox, setLookChatBox] = useState(true);
-if (props.lookChatBox === true) {
-    return (
-     <>
-        
-        {allUserMessages.map((messages) => {
-                  return (
-                     key={messages._id} 
-                     {messages.postDate} 
-                      {messages.user} 
-                      {messages.currentRoom}
-                      {messages.userMessages}
-                  )})
-                         
-     </>
-                 
+  useEffect(() => {
+    //fetches information from a local API route set up on the server
+    fetch("http://localhost:8000/allentries")
+      .then((res) => {
+        return res.json();
+      })
+      .then((json) => {
+        setAllEntries(json);
+      });
+  }, []);
 
-    )} else {
-                return null;
-                
-   }}
+  //conditionally renders the component through the boolean of "submittedEntry" state attached to the "submit" button
 
-
+  return (
+    <section id="chat-box">
+      {/* table used for chatbox layout */}
+      <table>
+        {/* CURRENT ROOM HEADING */}
+        <thead>
+          <tr>
+            {/*need useState for room switch {currentRoom}*/}
+            <th colspan="4">Current Room</th>
+          </tr>
+        </thead>
+        {/* MESSAGES AND USER NAME IN CHATBOX */}
+        <tbody colspan="4">
+          {allEntries.map((entry) => {
+            return (
+              <tr key={entry._id}>
+                <td id="userName">{entry.name}</td>
+                <td id="message">{entry.message}</td>
+                {""}
+              </tr>
+            );
+          })}
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>
+              <form action="http://localhost:5000/create" method="POST">
+                {/* USER NAME FORM */}
+                <input type="text" name="name" placeholder="User Name" />
+                {/* MESSAGE FORM */}
+                <input type="text" name="message" placeholder="Message" />
+                <input type="submit" value="Send" />
+                <input type="submit" value="Refresh" />
+              </form>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  );
+}
