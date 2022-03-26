@@ -15,9 +15,15 @@ export default function RoomLinks() {
           <li>
             <NavLink to="/general">General</NavLink>
           </li>
-          <li><NavLink to="/pets">Pets</NavLink></li>
-          <li><NavLink to="/food">Food</NavLink></li>
-          <li><NavLink to="/Books">Books</NavLink></li>
+          <li>
+            <NavLink to="/pets">Pets</NavLink>
+          </li>
+          <li>
+            <NavLink to="/food">Food</NavLink>
+          </li>
+          <li>
+            <NavLink to="/Books">Books</NavLink>
+          </li>
         </ul>
       </nav>
     </section>
