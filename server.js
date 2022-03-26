@@ -7,8 +7,9 @@ const express = require("express");
 //import cors to resolve any in-browser errors
 const cors = require("cors");
 
-//import User Schema
-const UserSchema = require("./UserSchema.js");
+//import Schema
+const Schema = require("./Schema.js");
+const { response } = require("express");
 
 //create initial connection to database
 mongoose.connect("mongodb://localhost:27017/react-chat", {
@@ -34,38 +35,41 @@ app.use(express.static("./build"));
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-//Create User Model --- connecting to Chat Box
-const UserMessage = mongoose.model("UserMessages", UserSchema);
+//Create Model --- connecting to Chat Box
+const Entry = mongoose.model("entries", Schema);
 
-//UserMessages is collection
+//Entries is collection
 
 //Creating our API route for the front end to access the entries from the database -- need client to display data
-app.get("/allUserMessages", async (req, res) => {
+app.get("/allEntries", async (req, res) => {
   //assign result of a find on our Model to a variable
-  let allUserMessages = await UserMessage.find({});
+  let allEntries = await Entries.find({});
 
-  //send results a json file to the page --- can sort out information we need (userNames and userMessages)
-  res.json(allUserMessages);
+  /*send results a json file to the page --- can sort out information we need (names and messages)*/
+
+  res.json(allEntries);
 });
 
-//CREATE functionality for inserting new user/message into our collection
+//CREATE functionality for inserting new Entry into our collection
 //client sending information for server to get
-app.post("/create", async (req, res) => {
-  //assign creation of new user/message into a variable
-  const newUserMessage = new UserMessage({
-    postDate: req.body.postDate,
-    user: req.body.user,
-    currentRoom: req.body.currentRoom,
-    userMessage: req.body.userMessage,
+app.post("/create/:roomId", async (req, res) => {
+
+  //grab room id from document
+  let roomId = req.params.roomId
+  
+  //assign creation of new entry into a variable
+  const newEntry = new Entry({
+    date: req.body.date,
+    name: req.body.name,
+    room: req.body.room,
+    message: req.body.message,
   });
 
-  //save new user/message to the Model
-  await newUserMessage.save();
-  //redirect to home page
-  //need to be sure user is not stuck on blank page
+   //using the retrieved document roomId to create a matching document in our Entry model
+  await newEntry.save({room : roomId});
 
-  res.redirect("/");
 });
+
 
 app.listen(port, () => {
   console.log(`Listening on port: ${port}`);
