@@ -46,7 +46,7 @@ export default function ChatBox(props) {
         <tfoot>
           <tr>
             <td>
-              <form action="http://localhost:5000/create" method="POST">
+              <form action={"/create"} method="POST">
                 {/* USER NAME FORM */}
                 <input type="text" name="name" placeholder="User Name" />
                 {/* MESSAGE FORM */}
