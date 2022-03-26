@@ -52,6 +52,7 @@ app.get("/allEntries", async (req, res) => {
 
 //CREATE functionality for inserting new Entry into our collection
 //client sending information for server to get
+//not sure if this will work...
 app.post("/create/:roomId", async (req, res) => {
 
   //grab room id from document
