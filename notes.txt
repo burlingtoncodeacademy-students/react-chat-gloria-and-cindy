@@ -1,3 +1,6 @@
+i've been working on this between life tasks and haven't been able to move past cannot get / 
+i haven't changed anything major to the files so i haven't commited any changes.  
+
 //FUNCTIONALITY
 
 COMPONENTS
