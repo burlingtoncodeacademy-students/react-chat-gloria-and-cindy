@@ -7,6 +7,8 @@ import ChatBox from "./components/ChatBox.jsx"
 //style import
 import './styles/App.css';
 import NavLinks from './components/NavLinks.jsx'
+import Ad from './components/Ad.jsx'
+import Banner from './components/Banner.jsx'
 
 export default function App() {
 
