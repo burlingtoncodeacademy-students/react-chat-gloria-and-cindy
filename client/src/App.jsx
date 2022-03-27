@@ -1,6 +1,3 @@
-//importing hook from React
-import React, { useState } from "react";
-
 //import components
 import ChatBox from "./components/ChatBox.jsx";
 import NavLinks from "./components/NavLinks.jsx";
@@ -17,18 +14,21 @@ export default function App() {
       <header className="banner">
         <Banner />
       </header>
+
       {/* NavLinks Component */}
       <nav className="nav-links">
         <NavLinks />
       </nav>
-      {/* ChatBox Component */}
-      <section className="chat-box">
-        <ChatBox />
-      </section>
+
       {/* Ad Component */}
       <aside className="ad">
         <Ad />
       </aside>
+
+      {/* ChatBox Component */}
+      <section className="chat-box">
+        <ChatBox />
+      </section>
     </main>
   );
 }
