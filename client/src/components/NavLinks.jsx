@@ -1,3 +1,4 @@
+//library imports
 import React from 'react' ;
 
 class NavLinks extends React.Component {
@@ -5,10 +6,13 @@ class NavLinks extends React.Component {
     render ( ) {
         return (
             <div id="navigation">
-               Room 1
-               Room 2
-               Room 3
-               Room 4 
+            <h3>Available Rooms</h3>
+               <ul>
+               <li>Room 1</li>
+               <li>Room 2</li>
+               <li>Room 3</li>
+               <li>Room 4</li> 
+               </ul>
             </div>
         );
     }
