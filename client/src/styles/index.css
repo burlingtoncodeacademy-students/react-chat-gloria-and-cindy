@@ -17,7 +17,12 @@ code {
 }
 
 ad {
-  background-color: beige;
+  background-color: aliceblue;
+  width: 188;
+  height: 190px;
+  border: 1px black;
+  display: flex;
+  align-items: flex-end;
 }
 
 banner {
@@ -25,6 +30,8 @@ banner {
   width: 809px;
   height: 115px;
   border: 1px black;
+  display: flex;
+  justify-content: center;
 }
 
 navigation {
@@ -32,6 +39,8 @@ navigation {
   width: 188px;
   height: 299px;
   border: 1px black;
+  display: flex;
+  justify-content:start;
 }
 
 chat-box {
@@ -39,4 +48,8 @@ chat-box {
   width: 568px;
   height: 405px;
   border: 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
 }
