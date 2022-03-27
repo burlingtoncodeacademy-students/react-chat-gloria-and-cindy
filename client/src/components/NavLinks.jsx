@@ -4,7 +4,7 @@ class NavLinks extends React.Component {
 
     render ( ) {
         return (
-            <div>
+            <div id="navigation">
                Room 1
                Room 2
                Room 3
