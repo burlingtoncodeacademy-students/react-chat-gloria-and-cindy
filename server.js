@@ -38,6 +38,9 @@ app.use(cors());
 //Create Model --- connecting to Chat Box
 const Entry = mongoose.model("entries", Schema);
 
+// Create a landing page for localhost to connect to
+app.get('/', (request, response) => response.send('Welcome to the chat!'))
+
 //Entries is collection
 
 //Creating our API route for the front end to access the entries from the database -- need client to display data
