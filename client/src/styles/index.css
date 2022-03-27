@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#grad {
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+
+ad {
+  background-color: beige;
+}
+
+banner {
+  background-color: bisque;
+}
+
+navigation {
+  background-color: azure;
+}
+
+chat-box {
+  background-color: blanchedalmond;
+}
