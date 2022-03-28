@@ -32,7 +32,7 @@ export default function ChatBox(props) {
           </tr>
         </thead>
         {/* MESSAGES AND USER NAME IN CHATBOX */}
-        <tbody colspan="4" height='350px' id="table-body">
+        <tbody colspan="4" height='450px' id="table-body">
           {allEntries.map((entry) => {
             return (
               <tr key={entry._id}>
