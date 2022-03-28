@@ -28,11 +28,11 @@ export default function ChatBox(props) {
         <thead>
           <tr>
             {/*need useState for room switch {currentRoom}*/}
-            <th colspan="4">Current Room</th>
+            <th colspan="4">Lets Type HERE!</th>
           </tr>
         </thead>
         {/* MESSAGES AND USER NAME IN CHATBOX */}
-        <tbody colspan="4">
+        <tbody colspan="4" height='350px' id="table-body">
           {allEntries.map((entry) => {
             return (
               <tr key={entry._id}>
