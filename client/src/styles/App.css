@@ -1,0 +1,103 @@
+/* ----------- App Styling (main) ----------- */
+
+/* Used Grid to match Figma Layout */
+/* need to center main. Not sure what would be the best approach to achieve this. */
+
+
+main{
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 3;
+  gap: 25px;
+  /* border: 1px solid red; */
+  text-align: center;
+  width: 50%;
+}
+
+.App{
+  margin: 25px;
+  padding: 25px;
+}
+
+/* Banner */
+header{
+  border: 5px groove rgb(94, 190, 94);
+  grid-column: 1/8;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+/* Available Rooms */
+nav{
+  border: 5px groove rgb(91, 131, 240);
+  grid-column: 1/2;
+  grid-row: 2/4;
+  padding: 10px;
+  justify-content: center;
+ }
+
+/* Ad */
+aside{
+  border: 5px groove rgb(238, 119, 8);
+  grid-column: 1/2;
+  grid-row: 4/5;
+  justify-content: center;
+}
+
+/* Chat Box */
+section{
+  border: 5px groove rgb(226, 212, 13);
+  grid-column: 2/8;
+  grid-row: 2/5;
+  padding: 10px;
+}
+
+
+/* ----------- Navigation Styling ----------- */
+
+ul {
+  list-style-type: none;
+  width: 250px;
+  font-family:cursive;
+  font-size: large;
+   }
+
+#navigation{
+  height: 250px;
+}
+
+li{
+  padding: 10px;
+}
+
+#room1{
+  color: Red;
+}
+#room2{
+  color: orange;
+}
+#room3{
+  color: rgb(195, 195, 20);
+}
+#room4{
+  color: green;
+}
+
+/* ----------- Ad Styling ----------- */
+
+/* need to work on centering contents in box */
+label{
+  font-size: smaller;
+  padding: 45px;
+}
+
+/* ----------- Table Styling ----------- */
+
+/* need to work on styling of box */
+
+/* #table-body{
+  not sure on how to change the background color
+  background-color: ;
+} */
+
+/* need to fix buttons and sizes of forms */
