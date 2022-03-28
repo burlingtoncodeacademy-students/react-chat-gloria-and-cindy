@@ -1,6 +1,9 @@
 /* ----------- App Styling (main) ----------- */
 
 /* Used Grid to match Figma Layout */
+/* need to center main. Not sure what would be the best approach to achieve this. */
+
+
 main{
   display: inline-grid;
   grid-template-columns: auto auto;
@@ -38,6 +41,7 @@ aside{
   border: 5px groove rgb(238, 119, 8);
   grid-column: 1/2;
   grid-row: 4/5;
+  justify-content: center;
 }
 
 /* Chat Box */
@@ -53,18 +57,47 @@ section{
 
 ul {
   list-style-type: none;
-  margin: auto;
   width: 250px;
-  background-color: #f1f1f1;
-}
-
+  font-family:cursive;
+  font-size: large;
+   }
 
 #navigation{
-  width: 300px;
+  height: 250px;
+}
+
+li{
+  padding: 10px;
+}
+
+#room1{
+  color: Red;
+}
+#room2{
+  color: orange;
+}
+#room3{
+  color: rgb(195, 195, 20);
+}
+#room4{
+  color: green;
 }
 
 /* ----------- Ad Styling ----------- */
 
+/* need to work on centering contents in box */
 label{
   font-size: smaller;
+  padding: 45px;
 }
+
+/* ----------- Table Styling ----------- */
+
+/* need to work on styling of box */
+
+/* #table-body{
+  not sure on how to change the background color
+  background-color: ;
+} */
+
+/* need to fix buttons and sizes of forms */
