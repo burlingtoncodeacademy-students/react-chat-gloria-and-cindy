@@ -11,10 +11,10 @@ class NavLinks extends React.Component {
         
         <div id="navigation">
           <ul>
-            <li>Room 1</li>
-            <li>Room 2</li>
-            <li>Room 3</li>
-            <li>Room 4</li>
+            <li id="room1">Room 1</li>
+            <li id="room2">Room 2</li>
+            <li id="room3">Room 3</li>
+            <li id="room4">Room 4</li>
           </ul>
         </div>
       </>
