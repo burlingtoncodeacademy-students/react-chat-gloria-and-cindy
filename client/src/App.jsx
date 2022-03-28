@@ -26,7 +26,7 @@ export default function App() {
       </aside>
 
       {/* ChatBox Component */}
-      <section className="chat-box">
+      <section className="chat">
         <ChatBox />
       </section>
     </main>
