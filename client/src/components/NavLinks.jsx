@@ -7,7 +7,7 @@ class NavLinks extends React.Component {
       <>
         <h3>Available Rooms</h3>
 
-        //need to add links/routes to all chat Rooms
+        {/* need to add links/routes to all chat Rooms -- likely use link and have different components from rooms 1-4 */}
         
         <div id="navigation">
           <ul>
